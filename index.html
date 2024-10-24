@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @keyframes rainbow {
+      0% { color: #ff00ff; }
+      25% { color: #00ffff; }
+      50% { color: #ffff00; }
+      75% { color: #00ff00; }
+      100% { color: #ff00ff; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+    }
+
+    body {
+      background: linear-gradient(45deg, #00ffff, #ff00ff);
+      font-family: "Comic Sans MS", cursive;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .smiley {
+      font-size: 60px;
+      position: absolute;
+      animation: float 3s infinite;
+    }
+
+    .smiley:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+    .smiley:nth-child(2) { top: 20%; right: 5%; animation-delay: 0.5s; }
+    .smiley:nth-child(3) { bottom: 10%; left: 10%; animation-delay: 1s; }
+    .smiley:nth-child(4) { bottom: 20%; right: 10%; animation-delay: 1.5s; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 10px;
+      border: 3px solid #ffff00;
+      box-shadow: 
+        0 0 20px rgba(0,0,0,0.3),
+        0 0 40px #ff00ff,
+        0 0 60px #00ffff;
+    }
+
+    .header {
+      animation: rainbow 4s infinite;
+      font-size: 48px;
+      margin: 20px 0;
+      text-shadow: 
+        2px 2px #fff,
+        4px 4px #ff00ff;
+    }
+
+    .photo {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ffff00;
+      box-shadow: 
+        0 0 15px #ff00ff,
+        0 0 30px #00ffff;
+      margin: 20px;
+      animation: bounce 3s infinite;
+    }
+
+    .hearts {
+      font-size: 24px;
+      color: #ff00ff;
+      margin: 20px 0;
+      animation: rainbow 4s infinite;
+    }
+
+    .announcement {
+      font-size: 24px;
+      line-height: 1.5;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .announcement h2 {
+      font-size: 36px;
+      animation: rainbow 4s infinite;
+    }
+
+    .date {
+      font-size: 36px;
+      background: linear-gradient(90deg, #ff00ff, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 20px 0;
+      animation: bounce 2s infinite;
+    }
+
+    .marquee {
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      margin: 20px 0;
+      border: 2px solid #ffff00;
+    }
+
+    .button {
+      background: linear-gradient(90deg, #ff00ff, #00ffff);
+      color: white;
+      padding: 15px 30px;
+      border: 3px solid #ffff00;
+      border-radius: 25px;
+      font-size: 20px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s;
+      text-shadow: 2px 2px #000;
+    }
+
+    .button:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 0 20px #ff00ff;
+    }
+
+    .decorative-element {
+      font-size: 40px;
+      margin: 10px;
+      animation: spin 4s linear infinite;
+      display: inline-block;
+    }
+
+    .starburst {
+      position: absolute;
+      font-size: 30px;
+      animation: blink 1s infinite;
+    }
+
+    .starburst:nth-child(1) { top: 10%; left: 10%; }
+    .starburst:nth-child(2) { top: 10%; right: 10%; }
+    .starburst:nth-child(3) { bottom: 10%; left: 10%; }
+    .starburst:nth-child(4) { bottom: 10%; right: 10%; }
+
+    .cursor-trail {
+      position: fixed;
+      pointer-events: none;
+      font-size: 20px;
+      animation: float 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="smiley">😊</div>
+  <div class="smiley">😎</div>
+  <div class="smiley">🤪</div>
+  <div class="smiley">🥳</div>
+
+  <div class="container">
+    <span class="decorative-element">⭐</span>
+    <span class="decorative-element">🌈</span>
+    <h1 class="header">💕 Love is in the Air! 💕</h1>
+    <span class="decorative-element">🌈</span>
+    <span class="decorative-element">⭐</span>
+    
+    <img src="/api/placeholder/300/300" alt="Mehdi and Gil" class="photo">
+    
+    <div class="hearts">💖 💝 💗 💓 💕</div>
+    
+    <div class="announcement">
+      <div class="starburst">✨</div>
+      <div class="starburst">✨</div>
+      <div class="starburst">✨</div>
+      <div class="starburst">✨</div>
+      <p>The rumors are true! After years of beautiful friendship that blossomed into love,</p>
+      <h2>Mehdi & Gil</h2>
+      <p>are tying the knot! 🎉</p>
+    </div>
+    
+    <div class="marquee">
+      <marquee scrollamount="10">
+        🌟 AWESOME! 🎉 RADICAL! 💖 TOTALLY AMAZING! 🌟 JOIN THE PARTY! 🎈 GROOVY! 🌟
+      </marquee>
+    </div>
+    
+    <div class="date">
+      Coming Soon - 2024 
+      <span class="decorative-element">🎪</span>
+    </div>
+    
+    <button class="button">🎯 Save the Date! 🎯</button>
+    <button class="button">🌟 Share the Love! 🌟</button>
+
+    <div style="margin-top: 20px">
+      <span class="decorative-element">🌞</span>
+      <span class="decorative-element">🌈</span>
+      <span class="decorative-element">⭐</span>
+      <span class="decorative-element">🎪</span>
+    </div>
+  </div>
+</body>
+</html>
